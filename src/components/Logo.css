@@ -1,0 +1,35 @@
+/* ============================================
+   MOBILE-FIRST BASE STYLES (< 768px)
+   ============================================ */
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.logo-image {
+  max-width: 260px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============================================
+   TABLET STYLES (768px and up)
+   ============================================ */
+@media (min-width: 768px) {
+  .logo-image {
+    max-width: 240px;
+  }
+}
+
+/* ============================================
+   DESKTOP STYLES (1024px and up)
+   ============================================ */
+@media (min-width: 1024px) {
+  .logo-image {
+    max-width: 280px;
+  }
+}
