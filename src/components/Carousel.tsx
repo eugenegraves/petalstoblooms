@@ -68,7 +68,6 @@ const categoryTitles: Record<string, string> = {
 
 const Carousel = () => {
   const { category } = useParams<{ category: string }>()
-  const navigate = useNavigate()
   const [currentIndex, setCurrentIndex] = useState(0)
   const carouselRef = useRef<HTMLDivElement>(null)
   const imageRef = useRef<HTMLImageElement>(null)

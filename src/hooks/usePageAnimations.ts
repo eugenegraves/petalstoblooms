@@ -1,15 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 
-interface AnimationConfig {
-  fadeIn?: boolean
-  slideUp?: boolean
-  slideFromLeft?: boolean
-  slideFromRight?: boolean
-  delay?: number
-  duration?: number
-}
-
 /**
  * Custom hook for page animations
  * Animates elements on mount and when navigating between pages
@@ -26,8 +17,6 @@ export const usePageAnimations = () => {
     animatedElements.forEach((el) => {
       const element = el as HTMLElement
       const config = element.dataset.animate || ''
-      const delay = parseFloat(element.dataset.delay || '0')
-      const duration = parseFloat(element.dataset.duration || '0.8')
 
       // Set initial state based on animation type
       if (config.includes('fade-up')) {
